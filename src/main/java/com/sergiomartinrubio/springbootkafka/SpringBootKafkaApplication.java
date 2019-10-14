@@ -14,7 +14,5 @@ public class SpringBootKafkaApplication {
         SpringApplication.run(SpringBootKafkaApplication.class, args);
     }
 
-    @Autowired
-    private KafkaTemplate<String, String> template;
 
 }
