@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.KafkaHeaders;
 import org.springframework.kafka.support.SendResult;
@@ -21,7 +22,7 @@ import java.util.Map;
 public class SpringBootKafkaApplication implements CommandLineRunner {
 
     @Autowired
-    KafkaTemplate<String, String> template;
+    private KafkaTemplate<String, String> template;
 
     public static void main(String[] args) {
         SpringApplication.run(SpringBootKafkaApplication.class, args);
